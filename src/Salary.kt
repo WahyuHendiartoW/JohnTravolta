@@ -10,7 +10,8 @@ class Salary {
                     salary = workHour.times(normalRate)
                 }
                 workHour > 40 -> {
-                    salary = workHour.times(normalRate.times(1.5)).toInt()
+                    salary = 40.times(normalRate)
+                        .plus((workHour.minus(40)).times(normalRate.times(1.5))).toInt()
                 }
             }
             return salary

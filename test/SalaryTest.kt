@@ -6,19 +6,19 @@ internal class SalaryTest {
 
     @Test
     fun testSalary() {
-        val salaryExpected = 1170000
+        val salaryExpected = 870000
         assertEquals(salaryExpected, Salary.calculateSalary(52))
     }
 
     @Test
     fun testMessageSaveMoney() {
-        val messageExpected = "Cari tambahan"
+        val messageExpected = "Bisa menabung"
         assertEquals(messageExpected, Salary.saveMoneyMessage(Salary.calculateSalary(52), 600000))
     }
 
     @Test
     fun testSavings() {
-        val savingsExpected = 120000
+        val savingsExpected = 250000
         assertEquals(savingsExpected, Salary.calculateSavings(Salary.calculateSalary(52), 600000))
     }
 }
